@@ -6,10 +6,9 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,18,24&height=48&section=footer&fontSize=0&animation=twinkling" alt="" width="100%"/>
 
-[![CVPR 2026](https://img.shields.io/badge/CVPR-2026-B31B1B?style=for-the-badge)](https://cvpr.thecvf.com/)
-[![FedMPT](https://img.shields.io/badge/Method-FedMPT-7C3AED?style=for-the-badge)](https://github.com/xuc865/FedMPT-main)
-[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-1.12+-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![CVPR 2026](https://img.shields.io/badge/CVPR-2026-B31B1B)](https://cvpr.thecvf.com/)
+[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-1.12+-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 
 </div>
 
