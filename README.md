@@ -1,7 +1,6 @@
 <div align="center">
 <img src="doc/logo.svg" alt="OpenFedML" width="560"/>
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2800&pause=900&color=818CF8&center=true&vCenter=true&multiline=true&width=620&lines=OpenFedML;Federated+Multi-Label+Recognition;Vision-Language+Models+%2B+Prompt+Tuning;FedMPT+%40+CVPR+2026)](https://github.com/xuc865/FedMPT-main)
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=400&size=16&duration=3500&pause=1200&color=94A3B8&center=true&vCenter=true&width=580&lines=Open-source+federated+learning+codebase;Multi-label+%7C+Client+heterogeneity+%7C+FedAvg)](https://github.com/xuc865/FedMPT-main)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=3200&pause=1000&color=94A3B8&center=true&vCenter=true&width=600&lines=Federated+Multi-Label+Recognition;Vision-Language+Models+%2B+Prompt+Tuning;FedMPT+%40+CVPR+2026;Multi-label+%7C+Client+heterogeneity+%7C+FedAvg)](https://github.com/xuc865/FedMPT-main)
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,18,24&height=48&section=footer&fontSize=0&animation=twinkling" alt="" width="100%"/>
 [![CVPR 2026](https://img.shields.io/badge/CVPR-2026-B31B1B?style=for-the-badge)](https://cvpr.thecvf.com/)
 [![FedMPT](https://img.shields.io/badge/Method-FedMPT-7C3AED?style=for-the-badge)](https://github.com/xuc865/FedMPT-main)
