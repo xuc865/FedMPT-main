@@ -1,26 +1,12 @@
 <div align="center">
-
 <img src="doc/logo.svg" alt="OpenFedML" width="560"/>
-
-<br/><br/>
-
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=2800&pause=900&color=818CF8&center=true&vCenter=true&multiline=true&width=620&lines=OpenFedML;Federated+Multi-Label+Recognition;Vision-Language+Models+%2B+Prompt+Tuning;FedMPT+%40+CVPR+2026)](https://github.com/xuc865/FedMPT-main)
-
-<br/>
-
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=400&size=16&duration=3500&pause=1200&color=94A3B8&center=true&vCenter=true&width=580&lines=Open-source+federated+learning+codebase;Multi-label+%7C+Client+heterogeneity+%7C+FedAvg)](https://github.com/xuc865/FedMPT-main)
-
-<br/><br/>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,18,24&height=80&section=footer&fontSize=0&animation=twinkling" alt="" width="100%"/>
-
-<br/>
-
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,18,24&height=48&section=footer&fontSize=0&animation=twinkling" alt="" width="100%"/>
 [![CVPR 2026](https://img.shields.io/badge/CVPR-2026-B31B1B?style=for-the-badge)](https://cvpr.thecvf.com/)
 [![FedMPT](https://img.shields.io/badge/Method-FedMPT-7C3AED?style=for-the-badge)](https://github.com/xuc865/FedMPT-main)
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.12+-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
-
 </div>
 
 ---
