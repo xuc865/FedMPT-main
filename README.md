@@ -3,7 +3,6 @@
 <img src="doc/logo.svg" alt="OpenFedML" width="560"/>
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=3200&pause=1000&color=94A3B8&center=true&vCenter=true&width=600&lines=Federated+Multi-Label+Recognition;Vision-Language+Models+%2B+Prompt+Tuning;FedMPT+%40+CVPR+2026;Multi-label+%7C+Client+heterogeneity+%7C+FedAvg)](https://github.com/xuc865/FedMPT-main)
-
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.12+-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 
@@ -206,16 +205,20 @@ python Launch_FL.py --root ./data --output-dir ./outputs \
 
 ---
 
-## 🏗️ Federated Framework (overview)
+## 🏗️ Federated Framework
+
+<p align="center">
 
 ```
 Launch_FL.py  →  Server(cfg).train()
-                    ├── build clients (class / cluster split)
-                    ├── each round: sample clients → local train → FedAvg
-                    └── periodic test (mAP / F1)
+                 ├─ build clients (class / cluster split)
+                 ├─ each round: sample clients → local train → FedAvg
+                 └─ periodic test (mAP / F1)
 ```
 
-`fedmpt` follows the same loop as `dualcoop`, `fedmvp`, `fedtpg`, etc. (`prompt_learner` aggregation). `fedram` / `fedawa` use their own server branches. Entry point and config wiring (`config/utils.py`, `federated/server.py`, `federated/client.py`) are in place; a full run still needs datasets, GPU, and CLIP weights.
+</p>
+
+<p align="center"><sub><code>fedmpt</code> shares the prompt-learner FedAvg path with <code>dualcoop</code>, <code>fedmvp</code>, <code>fedtpg</code>, … · <code>fedram</code> / <code>fedawa</code> use dedicated server branches</sub></p>
 
 ---
 
