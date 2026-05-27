@@ -2,9 +2,7 @@
 
 | File | Description |
 |------|-------------|
-| `logo.png` | README header logo |
+| `logo.svg` | README header logo |
 | `image1.png` | VOC 2007 results |
 | `image2.png` | MS COCO 2014 results |
 | `image3.png` | NUS-WIDE results |
-
-Datasets `multiscene` / `mlrsnet` use the same loaders; add result figures here when available.

@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="320" viewBox="0 0 720 320">
-  <rect width="720" height="320" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
-  <text x="360" y="140" fill="#64748b" font-family="system-ui,sans-serif" font-size="22" font-weight="600" text-anchor="middle">Results figure</text>
-  <text x="360" y="175" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="15" text-anchor="middle">Replace with your table/plot: doc/results_voc.png</text>
-  <text x="360" y="205" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="13" text-anchor="middle">(see doc/README.md)</text>
-</svg>
