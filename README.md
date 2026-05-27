@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="doc/logo.svg" alt="OpenFedML" width="520"/>
+<img src="doc/logo.png" alt="OpenFedML" width="520"/>
 
 **Open-source federated multi-label learning with vision-language models**
 
@@ -34,13 +34,25 @@ FedMPT learns shared prompt tokens across clients, models multiple visual condit
 
 ## 📊 Results
 
-Federated MLR results on VOC, COCO, and NUS-WIDE (add your tables/plots as `doc/results_*.png` — see `doc/README.md`).
+Federated MLR results on PASCAL VOC 2007, MS COCO 2014, and NUS-WIDE.
 
-| VOC 2007 | MS COCO 2014 | NUS-WIDE |
-|:--------:|:------------:|:--------:|
-| ![VOC](doc/results_placeholder.svg) | ![COCO](doc/results_placeholder.svg) | ![NUS](doc/results_placeholder.svg) |
+**VOC 2007**
 
-*Replace `doc/results_placeholder.svg` with `results_voc.png`, `results_coco.png`, `results_nus.png` when ready.*
+<p align="center">
+  <img src="doc/image1.png" alt="VOC 2007 results" width="640"/>
+</p>
+
+**MS COCO 2014**
+
+<p align="center">
+  <img src="doc/image2.png" alt="MS COCO 2014 results" width="640"/>
+</p>
+
+**NUS-WIDE**
+
+<p align="center">
+  <img src="doc/image3.png" alt="NUS-WIDE results" width="640"/>
+</p>
 
 ---
 
