@@ -90,10 +90,12 @@ Set `DATA_ROOT` (default `./data`):
 | PASCAL VOC 2007 | `voc` | `VOC2007/VOCtrainval2007/VOCdevkit/VOC2007/`<br>`VOC2007/VOCtest2007/VOCdevkit/VOC2007/` |
 | MS COCO 2014 | `coco` | `coco/train2014/`, `coco/val2014/`, `coco/annotations/` |
 | NUS-WIDE | `nus` | `NUSWIDE/raw/Flickr/`, `NUSWIDE/ImageList/`, `NUSWIDE/TrainTestLabels/` |
+| Multi-Scene | `multiscene` | `MultiScene-Clean/Tra.csv`, `Test.csv`, `images/*.jpg` |
+| MLRSNet | `mlrsnet` | `MLRSNet/Labels/<category>.csv`, `MLRSNet/Images/<category>/` |
 
-Official downloads: [VOC](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/) · [COCO](https://cocodataset.org/) · [NUS-WIDE](https://lms.comp.nus.edu.sg/wp-content/uploads/2019/research/nuswide/NUS-WIDE.html)
+Official downloads: [VOC](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/) · [COCO](https://cocodataset.org/) · [NUS-WIDE](https://lms.comp.nus.edu.sg/wp-content/uploads/2019/research/nuswide/NUS-WIDE.html) · [Multi-Scene](https://github.com/Yangyang-199/Multi-Scene-Clean) · [MLRSNet](https://github.com/summitgao/MLRSNet)
 
-- **SCPNet** (optional): `python scripts/build_scpnet_relations.py --dataset voc --root $DATA_ROOT`
+- **SCPNet** (optional): `python scripts/build_scpnet_relations.py --dataset <voc|coco|nus|multiscene|mlrsnet> --root $DATA_ROOT`
 - **ZSL / GZSL**: put filtered JSONs in `labs/` — see `labs/README.md` (not needed for standard FMLR)
 
 ---
@@ -107,14 +109,16 @@ export DATA_ROOT=./data
 export OUTPUT_DIR=./outputs
 
 # bash run.sh <dataset> <lr> <model> <epochs> <gpu> <num_clusters>
-bash run.sh voc  0.001 fedmpt   50 0 2
-bash run.sh coco 0.001 fedmpt  100 0 8
-bash run.sh nus  0.001 dualcoop 50 0 4
+bash run.sh voc         0.001 fedmpt   50 0 2
+bash run.sh coco        0.001 fedmpt  100 0 8
+bash run.sh nus         0.001 dualcoop 50 0 4
+bash run.sh multiscene  0.001 fedmpt   50 0 2
+bash run.sh mlrsnet     0.001 fedmpt   50 0 4
 ```
 
 | # | Argument | Description |
 |---|----------|-------------|
-| 1 | `dataset` | `voc` · `coco` · `nus` |
+| 1 | `dataset` | `voc` · `coco` · `nus` · `multiscene` · `mlrsnet` |
 | 2 | `lr` | Client learning rate |
 | 3 | `model` | e.g. `fedmpt`, `dualcoop`, `fedmvp`, `fedram` |
 | 4 | `epochs` | Federated rounds |

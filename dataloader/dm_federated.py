@@ -140,7 +140,7 @@ class TestDataManager:
         elif dataname == 'multiscene':
             dataset = MultiScene('multiscene', cfg, available_classes, traintest="test", clip_model=clip_model)
         elif dataname == 'mlrsnet':
-            dataset = MLRSNet('mlrsnet', cfg, available_classes, traintest="train", clip_model=clip_model)
+            dataset = MLRSNet('mlrsnet', cfg, available_classes, traintest="test", clip_model=clip_model)
         elif dataname == 'object':
             dataset = OBJECT365('object', cfg, available_classes, traintest="test", clip_model=clip_model)
             

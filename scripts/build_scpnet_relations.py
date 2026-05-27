@@ -17,7 +17,12 @@ from utilss.paths import scp_relation_path
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset", type=str, required=True, choices=["voc", "coco", "nus"])
+    parser.add_argument(
+        "--dataset",
+        type=str,
+        required=True,
+        choices=["voc", "coco", "nus", "multiscene", "mlrsnet"],
+    )
     parser.add_argument("--root", type=str, default="./data")
     args = parser.parse_args()
 
