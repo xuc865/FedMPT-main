@@ -32,12 +32,6 @@ FedMPT learns shared prompt tokens across clients, models multiple visual condit
 <th align="center"><code>--model_name</code></th>
 </tr>
 <tr>
-<td align="center">CoOp</td>
-<td align="center"><i>Learning to Prompt for Vision-Language Models</i></td>
-<td align="center">IJCV 2022</td>
-<td align="center"><code>coop</code></td>
-</tr>
-<tr>
 <td align="center">DualCoOp</td>
 <td align="center"><i>DualCoOp: Fast Adaptation to Multi-Label Recognition with Limited Annotations</i></td>
 <td align="center">NeurIPS 2022</td>

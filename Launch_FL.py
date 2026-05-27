@@ -84,7 +84,7 @@ if __name__ == "__main__":
         "--model_name",
         type=str,
         default="fedtpg",
-        help="coop, dualcoop, poscoop, scpnet, maple, tcp, fedtpg, fedpgp, vlp, fedram, fedawa, fedmvp, fedmpt",
+        help="dualcoop, poscoop, scpnet, maple, tcp, fedtpg, fedpgp, fedram, fedawa, fedmvp, fedmpt",
     )
     parser.add_argument(
         "--num_shots", type=int, default=8, help="number of samples each class"
