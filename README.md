@@ -111,7 +111,9 @@ Set `DATA_ROOT` (default `./data`):
 | Multi-Scene | `multiscene` | `MultiScene-Clean/Tra.csv`, `Test.csv`, `images/*.jpg` |
 | MLRSNet | `mlrsnet` | `MLRSNet/Labels/<category>.csv`, `MLRSNet/Images/<category>/` |
 
-Official downloads: [VOC](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/) · [COCO](https://cocodataset.org/) · [NUS-WIDE](https://lms.comp.nus.edu.sg/wp-content/uploads/2019/research/nuswide/NUS-WIDE.html) · [Multi-Scene](https://github.com/Yangyang-199/Multi-Scene-Clean) · [MLRSNet](https://github.com/summitgao/MLRSNet)
+Official downloads: [VOC](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/) · [COCO](https://cocodataset.org/) · [NUS-WIDE](https://lms.comp.nus.edu.sg/wp-content/uploads/2019/research/nuswide/NUS-WIDE.html) · [Multi-Scene](https://multiscene.github.io/) · [MLRSNet](https://github.com/summitgao/MLRSNet)
+
+If any dataset link is unavailable, you can also obtain mirrors from [OpenDataLab](https://opendatalab.com/).
 
 - **SCPNet** (optional): `python scripts/build_scpnet_relations.py --dataset <voc|coco|nus|multiscene|mlrsnet> --root $DATA_ROOT`
 - **ZSL / GZSL**: put filtered JSONs in `labs/` — see `labs/README.md` (not needed for standard FMLR)
