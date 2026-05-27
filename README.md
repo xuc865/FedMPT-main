@@ -22,7 +22,7 @@ FedMPT learns shared prompt tokens across clients, models multiple visual condit
 
 ## 🧩 Supported Methods
 
-<p align="center"><sub>Select via <code>--model_name</code> · all methods share the same federated training loop</sub></p>
+<p align="center"><sub><code>--model_name</code> must match <code>federated/server.py</code> exactly (lowercase)</sub></p>
 
 <table align="center">
 <tr>
@@ -30,6 +30,12 @@ FedMPT learns shared prompt tokens across clients, models multiple visual condit
 <th align="center">Paper</th>
 <th align="center">Venue</th>
 <th align="center"><code>--model_name</code></th>
+</tr>
+<tr>
+<td align="center">CoOp</td>
+<td align="center"><i>Learning to Prompt for Vision-Language Models</i></td>
+<td align="center">IJCV 2022</td>
+<td align="center"><code>coop</code></td>
 </tr>
 <tr>
 <td align="center">DualCoOp</td>
@@ -68,6 +74,12 @@ FedMPT learns shared prompt tokens across clients, models multiple visual condit
 <td align="center"><code>fedpgp</code></td>
 </tr>
 <tr>
+<td align="center">VLP</td>
+<td align="center"><i>Visual–language dual-stream prompt tuning (repo baseline)</i></td>
+<td align="center">—</td>
+<td align="center"><code>vlp</code></td>
+</tr>
+<tr>
 <td align="center">RAM / Fed-RAM</td>
 <td align="center"><i>Recover and Match: Open-Vocabulary Multi-Label Recognition through Knowledge-Constrained Optimal Transport</i></td>
 <td align="center">CVPR 2025</td>
@@ -98,6 +110,8 @@ FedMPT learns shared prompt tokens across clients, models multiple visual condit
 <td align="center"><code>fedmpt</code></td>
 </tr>
 </table>
+
+<p align="center"><sub>All supported flags: <code>coop</code> <code>dualcoop</code> <code>poscoop</code> <code>scpnet</code> <code>maple</code> <code>tcp</code> <code>fedtpg</code> <code>fedpgp</code> <code>vlp</code> <code>fedram</code> <code>fedawa</code> <code>fedmvp</code> <code>fedmpt</code></sub></p>
 
 ## 📊 Results
 
@@ -206,7 +220,7 @@ bash run.sh mlrsnet        0.001    fedmpt     50       0     4
 |---|----------|-------------|
 | 1 | `dataset` | `voc` · `coco` · `nus` · `multiscene` · `mlrsnet` |
 | 2 | `lr` | Client learning rate |
-| 3 | `model` | e.g. `fedmpt`, `dualcoop`, `fedmvp`, `fedram` |
+| 3 | `model` | `--model_name`, e.g. `fedmpt`, `dualcoop`, `fedmvp`, `fedram` (see table above) |
 | 4 | `epochs` | Federated rounds |
 | 5 | `gpu` | `CUDA_VISIBLE_DEVICES` |
 | 6 | `num_clusters` | Client partitions (heterogeneity) |
@@ -234,7 +248,7 @@ python Launch_FL.py \
 
 | Flag | Description |
 |------|-------------|
-| `--model_name` | Method selector |
+| `--model_name` | One of: `coop`, `dualcoop`, `poscoop`, `scpnet`, `maple`, `tcp`, `fedtpg`, `fedpgp`, `vlp`, `fedram`, `fedawa`, `fedmvp`, `fedmpt` |
 | `--num_clusters` | Number of client clusters |
 | `--num_cls_per_client` | Classes per client |
 | `--avail_percent` | Fraction of clients sampled per round |

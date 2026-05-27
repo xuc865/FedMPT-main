@@ -81,7 +81,10 @@ if __name__ == "__main__":
         "--exp_name", type=str, default="cross_cls", help="cross_data, cross_data, cross_cls"
     )
     parser.add_argument(
-        "--model_name", type=str, default="fedtpg", help="fedtpg, coop, vlp"
+        "--model_name",
+        type=str,
+        default="fedtpg",
+        help="coop, dualcoop, poscoop, scpnet, maple, tcp, fedtpg, fedpgp, vlp, fedram, fedawa, fedmvp, fedmpt",
     )
     parser.add_argument(
         "--num_shots", type=int, default=8, help="number of samples each class"
