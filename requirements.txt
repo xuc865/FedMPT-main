@@ -1,0 +1,15 @@
+torch>=1.12.0
+torchvision>=0.13.0
+numpy>=1.21.0
+Pillow>=9.0.0
+tqdm>=4.64.0
+einops>=0.8.0
+yacs>=0.1.8
+fvcore>=0.1.5
+omegaconf>=2.2.0
+scikit-learn>=1.0.0
+ftfy>=6.1.0
+regex>=2022.0.0
+timm>=0.6.0
+tensorboard>=2.20.0
+pycocotools>=2.0.6

@@ -16,7 +16,13 @@ import regex as re
 
 @lru_cache()
 def default_bpe():
-    return os.path.join(os.path.dirname(os.path.abspath(__file__)), "bpe_simple_vocab_16e6.txt.gz")
+    """
+    IMPORTANT:
+    Tokenizer BPE file is expected to be packaged with this repository.
+    We always read it from the fixed shared location under `convclip/`.
+    """
+    repo_root = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+    return os.path.join(repo_root, "convclip", "bpe_simple_vocab_16e6.txt.gz")
 
 
 @lru_cache()

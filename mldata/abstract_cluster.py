@@ -8,6 +8,9 @@ import pickle
 import numpy as np
 import pdb
 import torch.nn.functional as F
+from utilss.paths import cluster_cache_dir, ensure_dir
+
+
 class Datum:
     """Data instance which defines the basic attributes.
 
@@ -60,13 +63,16 @@ class ClusterMLDataset(Dataset):
         self.mode = "label" 
         
     @torch.no_grad()
-    def cluster(self,clip):
-        path = ""
+    def cluster(self, clip):
+        # Non-IID clients: KMeans on CLIP image features (paper §3.1), cached under output-dir
+        cache_root = cluster_cache_dir(self.cfg.OUTPUT_DIR)
         if self.cfg.TRAINER.ML.ZSL is None:
-            path = f"clusters/{self.mode}/{self.NAME}_{self.cfg.TRAINER.ML.NUM_CLUSTERS}.pkl"
+            fname = f"{self.NAME}_{self.cfg.TRAINER.ML.NUM_CLUSTERS}.pkl"
         else:
-            path = f"clusters/{self.mode}/{self.NAME}_{self.cfg.TRAINER.ML.NUM_CLUSTERS}_PE{self.cfg.TRAINER.ML.ZSL}.pkl"
-            
+            fname = f"{self.NAME}_{self.cfg.TRAINER.ML.NUM_CLUSTERS}_PE{self.cfg.TRAINER.ML.ZSL}.pkl"
+        path = os.path.join(cache_root, self.mode, fname)
+        ensure_dir(os.path.dirname(path))
+
         if not os.path.exists(path):
             data = self.cluster_with_clip(clip, self.class_names, self.cfg.TRAINER.ML.NUM_CLUSTERS)
             f = open(path, "wb")

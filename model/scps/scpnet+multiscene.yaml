@@ -14,6 +14,6 @@ T: 0.2
 sparse_topk: 62
 reweight_p: 0.2
 gcn_lr: 1e-5
-relation_file: PATHPDBB/FedMPT-main/model/scps/relation+multiscene.npy
+relation_file: relation+multiscene.npy
 ratio: 1
 scale: 10

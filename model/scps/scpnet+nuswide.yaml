@@ -13,6 +13,6 @@ T: 0.2
 sparse_topk: 50
 reweight_p: 0.2
 gcn_lr: 1e-4
-relation_file: PATHPDBB/FedMPT-main/model/scps/relation+nuswide.npy
+relation_file: relation+nuswide.npy
 ratio: 1
 scale: clip

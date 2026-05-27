@@ -12,6 +12,9 @@ from mldata.abstract_cluster import ClusterMLDataset
 from mldata.cls_to_names import nuswide_classes
 import random
 import numpy as np
+from utilss.paths import labs_dir
+
+
 class NUSWIDE(ClusterMLDataset, DatasetBase):
     NAME = "NUSWIDE"
     def __init__(self, set_id, cfg, available_classes, traintest, clip_model):
@@ -58,15 +61,15 @@ class NUSWIDE(ClusterMLDataset, DatasetBase):
                         self.data_list.append([img_path, label])
         else:
             if traintest == 'train':
-                self.train_file = os.path.join("PATHPDBB/FedTPG-main/labs", 'train_81_filtered.json')
+                self.train_file = os.path.join(labs_dir(), 'train_81_filtered.json')
                 train, class2idx, name_train = self._load_dataset(self.dataset_dir, self.train_file, shuffle=True)
                 self.data_list = train 
             elif cfg.TRAINER.ML.ZSL == "zsl" and traintest == "test":
-                self.test_file = os.path.join("PATHPDBB/FedTPG-main/labs", 'test_81_filtered.json')
+                self.test_file = os.path.join(labs_dir(), 'test_81_filtered.json')
                 test, _, name_test = self._load_dataset(self.dataset_dir, self.test_file, shuffle=False)
                 self.data_list = test 
             elif cfg.TRAINER.ML.ZSL == "gzsl" and traintest == "test":
-                self.test_file_gzsl = os.path.join("PATHPDBB/FedTPG-main/labs", 'test_1006_filtered.json')
+                self.test_file_gzsl = os.path.join(labs_dir(), 'test_1006_filtered.json')
                 test_gzsl, _, _ = self._load_dataset(self.dataset_dir, self.test_file_gzsl, shuffle=False)
                 self.data_list = test_gzsl
             else:

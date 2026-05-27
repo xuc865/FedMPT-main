@@ -20,8 +20,6 @@ from config.defaults import _C as cfg_default
 from config.utils import reset_cfg
 from utils import setup_logger
 from federated.server import Server
-import sys
-sys.path.append("PATHPDBB/FedTPG-main")
 
 import os
 def print_args(args, cfg):
@@ -133,7 +131,22 @@ if __name__ == "__main__":
     parser.add_argument(
         "--cls", type=int, default=4, help="avail_clusters"
     )
-    parser.add_argument("--output-dir", type=str, default="", help="output directory")
+    parser.add_argument(
+        "--agg",
+        type=str,
+        default="vanilla",
+        choices=["vanilla", "ot"],
+        help="FedMPT patch aggregation: vanilla (conv1d+softmax) or ot (Sinkhorn)",
+    )
+    parser.add_argument(
+        "--ot-reg",
+        type=float,
+        default=0.1,
+        help="Entropic regularization for Sinkhorn when --agg ot",
+    )
+    parser.add_argument(
+        "--output-dir", type=str, default="./outputs", help="output directory"
+    )
     parser.add_argument(
         "--resume",
         type=str,

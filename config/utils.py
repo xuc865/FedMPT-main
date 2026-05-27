@@ -13,7 +13,11 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
+import os
 from yacs.config import CfgNode as CN
+from utilss.paths import ensure_dir
+
+
 def reset_cfg(cfg, args):
     cfg.EXP_NAME = args.exp_name
     cfg.DATASET.NAME_SPACE = [args.dataset] 
@@ -65,6 +69,8 @@ def reset_cfg(cfg, args):
     cfg.TRAINER.ML.ALLOW_RESUME = args.allow_resume
     cfg.TRAINER.ML.COND = args.cond
     cfg.TRAINER.ML.CLS = args.cls
+    cfg.TRAINER.ML.AGG = args.agg
+    cfg.TRAINER.ML.OT_REG = args.ot_reg
     cfg.TRAINER.ML.ZSL = args.zsl
     cfg.TRAINER.ML.THRE = 0.5
     cfg.TRAINER.ML.NUM_CLUSTERS = args.num_clusters
@@ -75,19 +81,25 @@ def reset_cfg(cfg, args):
     cfg.TRAINER.ML.NEGATIVE_PROMPT_INIT = ""
     cfg.TRAINER.ML.ASL_GAMMA_NEG = args.neg
     cfg.TRAINER.ML.ASL_GAMMA_POS = args.pos
+    # Metrics / logs under --output-dir (replaces PATHPDBB placeholders)
+    log_subdir = "logs"
     if args.pa != 0:
-        cfg.TRAINER.SAVE_FILE = "PATHPDBB/PA/PDBB_AAAA_BBBB.txt"
+        log_subdir = os.path.join("logs", "partial_annotation")
     elif args.avail_percent != 1:
-        cfg.TRAINER.SAVE_FILE = "PATHPDBB/CA/PDBB_AAAA_BBBB.txt"
-    elif args.neda == True:
-        cfg.TRAINER.SAVE_FILE = "PATHPDBB/ASLA/PDBB_AAAA_BBBB.txt"
+        log_subdir = os.path.join("logs", "client_availability")
+    elif args.neda:
+        log_subdir = os.path.join("logs", "asla")
     elif args.zsl == "gzsl":
-        cfg.TRAINER.SAVE_FILE = "PATHPDBB/GZSL/PDBB_AAAA_BBBB.txt"
+        log_subdir = os.path.join("logs", "gzsl")
     elif args.zsl is not None:
-        cfg.TRAINER.SAVE_FILE = "PATHPDBB/ZSLGZSL/PDBB_AAAA_BBBB.txt"
-    else:
-        cfg.TRAINER.SAVE_FILE = "PATHPDBB/PDBB_AAAA_BBBB.txt" 
-    cfg.TRAINER.SAVE_DIR = "PATH/remote/PDBB/outputs/" 
+        log_subdir = os.path.join("logs", "zsl")
+    log_dir = ensure_dir(os.path.join(args.output_dir, log_subdir))
+    cfg.TRAINER.SAVE_FILE = os.path.join(
+        log_dir, f"{args.dataset}_{args.model_name}.txt"
+    )
+    cfg.TRAINER.SAVE_DIR = ensure_dir(
+        os.path.join(args.output_dir, "checkpoints")
+    ) 
     cfg.TRAINER.PA = args.pa
     cfg.TRAINER.SAVE = args.saving
     

@@ -8,24 +8,29 @@ from convclip import clip
 from convclip.simple_tokenizer import SimpleTokenizer as _Tokenizer
 import os
 from omegaconf import OmegaConf
- 
-pref = "PATHPDBB/FedMPT-main/model/scps/"
-# Base config
+from utilss.paths import scps_config_dir, scp_relation_path
+from utilss.scpnet_relations import ensure_relation_matrix
+
+pref = scps_config_dir() + os.sep
+
+
 def get_config(name):
-    base_cfg = OmegaConf.load(pref+'base.yaml')
-    if name == "voc":
-        main_cfg = OmegaConf.load(pref+'scpnet+voc.yaml')
-    elif name == "coco":
-        main_cfg = OmegaConf.load(pref+'scpnet+coco.yaml')
-    elif name == "nus":
-        main_cfg = OmegaConf.load(pref+'scpnet+nuswide.yaml')
-    elif name == "multiscene":
-        main_cfg = OmegaConf.load(pref+'scpnet+multiscene.yaml')
-    elif name == "mlrsnet":
-        main_cfg = OmegaConf.load(pref+'scpnet+mlrsnet.yaml')
-    else:
-        raise NotImplementedError
+    """Load SCPNet YAML; relation_file is resolved to repo-local path."""
+    base_cfg = OmegaConf.load(os.path.join(pref, "base.yaml"))
+    yaml_map = {
+        "voc": "scpnet+voc.yaml",
+        "coco": "scpnet+coco.yaml",
+        "nus": "scpnet+nuswide.yaml",
+        "multiscene": "scpnet+multiscene.yaml",
+        "mlrsnet": "scpnet+mlrsnet.yaml",
+    }
+    if name not in yaml_map:
+        raise NotImplementedError(f"SCPNet config not defined for dataset={name}")
+    main_cfg = OmegaConf.load(os.path.join(pref, yaml_map[name]))
     cfg = OmegaConf.merge(base_cfg, main_cfg)
+    cfg.relation_file = ensure_relation_matrix(
+        scp_relation_path(name), int(cfg.num_classes)
+    )
     return cfg
  
 _tokenizer = _Tokenizer()
@@ -155,6 +160,7 @@ class GraphConvolution(nn.Module):
 
 from timm.models.vision_transformer import resize_pos_embed
 class SCPNet(nn.Module):
+    """Fed-SCPNet: prompt learning + GCN over a class relation graph."""
 
     def __init__(self, cfg, classnames, clip_model):
         super().__init__()

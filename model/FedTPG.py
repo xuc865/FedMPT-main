@@ -98,8 +98,10 @@ class PromptLearner(nn.Module):
         return text_ctx, vis_ctx
 
 
-class FedMPT(nn.Module):
-    def __init__(self, cfg, clip_model,classnames,  device='cuda'):
+class FedTPG(nn.Module):
+    """FedTPG (ICLR 2024): text-driven prompt generation with a meta-network."""
+
+    def __init__(self, cfg, clip_model, classnames, device='cuda'):
         super().__init__()
         self.cfg = cfg
         self.set_prompt_prefix()
@@ -145,7 +147,7 @@ class FedMPT(nn.Module):
         prompts_ = classnames
         # print(f"Prompts: {prompts_}")
         prompts_ = torch.cat([clip.tokenize(p) for p in prompts_])
-        prompts_ = prompts_.cuda()
+        prompts_ = prompts_.to(self.device)
 
         with torch.no_grad():
             text_features_ = self.clip_model_.encode_text(prompts_)

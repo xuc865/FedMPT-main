@@ -12,6 +12,9 @@ from pycocotools.coco import COCO
 import random
 import numpy as np
 import pdb
+from utilss.paths import labs_dir
+
+
 class COCO2014(ClusterMLDataset, DatasetBase):
     NAME = "COCO2014"
     def __init__(self, set_id, cfg, available_classes, traintest, clip_model): # set_id, dataset_dir, transform 
@@ -52,15 +55,15 @@ class COCO2014(ClusterMLDataset, DatasetBase):
                         self.data_list.append([img_path, label]) 
         else: 
             if traintest == 'train':
-                self.train_file = os.path.join("PATHPDBB/FedTPG-main/labs", 'train_48_filtered.json')
+                self.train_file = os.path.join(labs_dir(), 'train_48_filtered.json')
                 train, class2idx, name_train = self._load_dataset(self.dataset_dir, self.train_file, shuffle=True)
                 self.data_list = train 
             elif cfg.TRAINER.ML.ZSL == "zsl" and traintest == "test":
-                self.test_file = os.path.join("PATHPDBB/FedTPG-main/labs", 'test_17_filtered.json')
+                self.test_file = os.path.join(labs_dir(), 'test_17_filtered.json')
                 test, _, name_test = self._load_dataset(self.dataset_dir, self.test_file, shuffle=False)
                 self.data_list = test 
             elif cfg.TRAINER.ML.ZSL == "gzsl" and traintest == "test":
-                self.test_file_gzsl = os.path.join("PATHPDBB/FedTPG-main/labs", 'test_65_filtered.json')
+                self.test_file_gzsl = os.path.join(labs_dir(), 'test_65_filtered.json')
                 test_gzsl, _, _ = self._load_dataset(self.dataset_dir, self.test_file_gzsl, shuffle=False)
                 self.data_list = test_gzsl
             else:

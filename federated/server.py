@@ -257,6 +257,7 @@ class Server(TrainerBase):
         else:
             raise NotImplementedError
         self.classnames = classsnames
+        # Instantiate federated prompt / VLM method (--model_name)
         print("Building custom CLIP")
         nam = cfg.MODEL.NAME
         if nam == 'fedtpg':
