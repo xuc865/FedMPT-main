@@ -21,21 +21,28 @@ FedMPT learns shared prompt tokens across clients, models multiple visual condit
 
 ## 🧩 Supported Methods
 
-| Method | Venue |
-|--------|-------|
-| DualCoOp | NeurIPS 2022 |
-| SCPNet | NeurIPS 2022 |
-| MaPLE | CVPR 2023 |
-| FedTPG | ICLR 2024 |
-| RAM / Fed-RAM | CVPR 2025 |
-| PosCoOp | WACV 2025 |
-| FedAWA | CVPR 2025 |
-| FedMVP | ICCV 2025 |
-| **FedMPT** *(ours)* | **CVPR 2026** |
+<p align="center"><sub>Select via <code>--model_name</code> · all methods share the same federated training loop</sub></p>
+
+<table align="center">
+<tr>
+<th align="center">Method</th>
+<th align="center">Venue</th>
+<th align="center"><code>--model_name</code></th>
+</tr>
+<tr><td align="center">DualCoOp</td><td align="center">NeurIPS 2022</td><td align="center"><code>dualcoop</code></td></tr>
+<tr><td align="center">SCPNet</td><td align="center">NeurIPS 2022</td><td align="center"><code>scpnet</code></td></tr>
+<tr><td align="center">MaPLE</td><td align="center">CVPR 2023</td><td align="center"><code>maple</code></td></tr>
+<tr><td align="center">FedTPG</td><td align="center">ICLR 2024</td><td align="center"><code>fedtpg</code></td></tr>
+<tr><td align="center">RAM / Fed-RAM</td><td align="center">CVPR 2025</td><td align="center"><code>fedram</code></td></tr>
+<tr><td align="center">PosCoOp</td><td align="center">WACV 2025</td><td align="center"><code>poscoop</code></td></tr>
+<tr><td align="center">FedAWA</td><td align="center">CVPR 2025</td><td align="center"><code>fedawa</code></td></tr>
+<tr><td align="center">FedMVP</td><td align="center">ICCV 2025</td><td align="center"><code>fedmvp</code></td></tr>
+<tr><td align="center"><b>FedMPT ⭐</b></td><td align="center"><b>CVPR 2026</b></td><td align="center"><code>fedmpt</code></td></tr>
+</table>
 
 ## 📊 Results
 
-<p align="center"><sub>Federated multi-label recognition · mAP under client heterogeneity</sub></p>
+<p align="center"><sub>Federated multi-label recognition · mAP under client heterogeneity · click to expand</sub></p>
 
 <table>
 <tr>
