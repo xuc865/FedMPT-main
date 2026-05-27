@@ -2,8 +2,9 @@
 
 <img src="doc/logo.png" alt="OpenFedML" width="520"/>
 
-**Open-source federated multi-label learning with vision-language models**
+<h2 align="center">Open-source federated multi-label learning<br/>with vision-language models</h2>
 
+[![CVPR 2026](https://img.shields.io/badge/CVPR-2026-B31B1B)](https://cvpr.thecvf.com/)
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.12+-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 </div>
