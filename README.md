@@ -50,9 +50,9 @@ FedMPT learns shared prompt tokens across clients, models multiple visual condit
 <td align="center"><code>maple</code></td>
 </tr>
 <tr>
-<td align="center">TCP (TaI-DPT)</td>
-<td align="center"><i>Texts as Images in Prompt Tuning for Multi-Label Image Recognition</i></td>
-<td align="center">CVPR 2023</td>
+<td align="center">TCP</td>
+<td align="center"><i>TCP: Textual-based Class-aware Prompt Tuning for Visual-Language Model</i></td>
+<td align="center">CVPR 2024</td>
 <td align="center"><code>tcp</code></td>
 </tr>
 <tr>
