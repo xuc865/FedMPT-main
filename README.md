@@ -167,6 +167,16 @@ python Launch_FL.py \
   --load-epoch 50
 ```
 
+**Remote sensing (Multi-Scene & MLRSNet)**
+
+```bash
+python Launch_FL.py --root ./data --output-dir ./outputs \
+  --dataset multiscene --model_name fedmpt --num_epoch 50 --num_clusters 2
+
+python Launch_FL.py --root ./data --output-dir ./outputs \
+  --dataset mlrsnet --model_name fedmpt --num_epoch 50 --num_clusters 4
+```
+
 ---
 
 ## 🏗️ Federated Framework (overview)
