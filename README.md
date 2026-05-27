@@ -3,8 +3,10 @@
 <img src="doc/logo.svg" alt="OpenFedML" width="560"/>
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=3200&pause=1000&color=94A3B8&center=true&vCenter=true&width=600&lines=Federated+Multi-Label+Recognition;Vision-Language+Models+%2B+Prompt+Tuning;FedMPT+%40+CVPR+2026;Multi-label+%7C+Client+heterogeneity+%7C+FedAvg)](https://github.com/xuc865/FedMPT-main)
-[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-1.12+-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+<p align="center">
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.8+-3776AB?logo=python&logoColor=white" alt="Python"/></a>
+<a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-1.12+-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch"/></a>
+</p>
 
 </div>
 
