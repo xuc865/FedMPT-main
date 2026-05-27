@@ -27,18 +27,64 @@ FedMPT learns shared prompt tokens across clients, models multiple visual condit
 <table align="center">
 <tr>
 <th align="center">Method</th>
+<th align="center">Paper</th>
 <th align="center">Venue</th>
 <th align="center"><code>--model_name</code></th>
 </tr>
-<tr><td align="center">DualCoOp</td><td align="center">NeurIPS 2022</td><td align="center"><code>dualcoop</code></td></tr>
-<tr><td align="center">SCPNet</td><td align="center">NeurIPS 2022</td><td align="center"><code>scpnet</code></td></tr>
-<tr><td align="center">MaPLE</td><td align="center">CVPR 2023</td><td align="center"><code>maple</code></td></tr>
-<tr><td align="center">FedTPG</td><td align="center">ICLR 2024</td><td align="center"><code>fedtpg</code></td></tr>
-<tr><td align="center">RAM / Fed-RAM</td><td align="center">CVPR 2025</td><td align="center"><code>fedram</code></td></tr>
-<tr><td align="center">PosCoOp</td><td align="center">WACV 2025</td><td align="center"><code>poscoop</code></td></tr>
-<tr><td align="center">FedAWA</td><td align="center">CVPR 2025</td><td align="center"><code>fedawa</code></td></tr>
-<tr><td align="center">FedMVP</td><td align="center">ICCV 2025</td><td align="center"><code>fedmvp</code></td></tr>
-<tr><td align="center"><b>FedMPT ⭐</b></td><td align="center"><b>CVPR 2026</b></td><td align="center"><code>fedmpt</code></td></tr>
+<tr>
+<td align="center">DualCoOp</td>
+<td align="center"><i>DualCoOp: Fast Adaptation to Multi-Label Recognition with Limited Annotations</i></td>
+<td align="center">NeurIPS 2022</td>
+<td align="center"><code>dualcoop</code></td>
+</tr>
+<tr>
+<td align="center">SCPNet</td>
+<td align="center"><i>Exploring Structured Semantic Prior for Multi Label Recognition with Incomplete Labels</i></td>
+<td align="center">CVPR 2023</td>
+<td align="center"><code>scpnet</code></td>
+</tr>
+<tr>
+<td align="center">MaPLE</td>
+<td align="center"><i>MaPLe: Multi-modal Prompt Learning</i></td>
+<td align="center">CVPR 2023</td>
+<td align="center"><code>maple</code></td>
+</tr>
+<tr>
+<td align="center">FedTPG</td>
+<td align="center"><i>Federated Text-driven Prompt Generation for Vision-Language Models</i></td>
+<td align="center">ICLR 2024</td>
+<td align="center"><code>fedtpg</code></td>
+</tr>
+<tr>
+<td align="center">RAM / Fed-RAM</td>
+<td align="center"><i>Recover and Match: Open-Vocabulary Multi-Label Recognition through Knowledge-Constrained Optimal Transport</i></td>
+<td align="center">CVPR 2025</td>
+<td align="center"><code>fedram</code></td>
+</tr>
+<tr>
+<td align="center">PosCoOp</td>
+<td align="center"><i>PositiveCoOp: Rethinking Prompting Strategies for Multi-Label Recognition with Partial Annotations</i></td>
+<td align="center">WACV 2025</td>
+<td align="center"><code>poscoop</code></td>
+</tr>
+<tr>
+<td align="center">FedAWA</td>
+<td align="center"><i>FedAWA: Adaptive Optimization of Aggregation Weights in Federated Learning Using Client Vectors</i></td>
+<td align="center">CVPR 2025</td>
+<td align="center"><code>fedawa</code></td>
+</tr>
+<tr>
+<td align="center">FedMVP</td>
+<td align="center"><i>FedMVP: Federated Multimodal Visual Prompt Tuning for Vision-Language Models</i></td>
+<td align="center">ICCV 2025</td>
+<td align="center"><code>fedmvp</code></td>
+</tr>
+<tr>
+<td align="center"><b>FedMPT ⭐</b></td>
+<td align="center"><b><i>FedMPT: Federated Multi-Label Prompt Tuning of Vision-Language Models</i></b></td>
+<td align="center"><b>CVPR 2026</b></td>
+<td align="center"><code>fedmpt</code></td>
+</tr>
 </table>
 
 ## 📊 Results
