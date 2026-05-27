@@ -68,12 +68,6 @@ FedMPT learns shared prompt tokens across clients, models multiple visual condit
 <td align="center"><code>fedpgp</code></td>
 </tr>
 <tr>
-<td align="center">VLP</td>
-<td align="center"><i>Visual–language dual-stream prompt tuning (repo baseline)</i></td>
-<td align="center">—</td>
-<td align="center"><code>vlp</code></td>
-</tr>
-<tr>
 <td align="center">RAM / Fed-RAM</td>
 <td align="center"><i>Recover and Match: Open-Vocabulary Multi-Label Recognition through Knowledge-Constrained Optimal Transport</i></td>
 <td align="center">CVPR 2025</td>
@@ -105,7 +99,7 @@ FedMPT learns shared prompt tokens across clients, models multiple visual condit
 </tr>
 </table>
 
-<p align="center"><sub>All supported flags: <code>coop</code> <code>dualcoop</code> <code>poscoop</code> <code>scpnet</code> <code>maple</code> <code>tcp</code> <code>fedtpg</code> <code>fedpgp</code> <code>vlp</code> <code>fedram</code> <code>fedawa</code> <code>fedmvp</code> <code>fedmpt</code></sub></p>
+<p align="center"><sub>Supported flags: <code>dualcoop</code> <code>poscoop</code> <code>scpnet</code> <code>maple</code> <code>tcp</code> <code>fedtpg</code> <code>fedpgp</code> <code>fedram</code> <code>fedawa</code> <code>fedmvp</code> <code>fedmpt</code></sub></p>
 
 ## 📊 Results
 
@@ -242,7 +236,7 @@ python Launch_FL.py \
 
 | Flag | Description |
 |------|-------------|
-| `--model_name` | One of: `coop`, `dualcoop`, `poscoop`, `scpnet`, `maple`, `tcp`, `fedtpg`, `fedpgp`, `vlp`, `fedram`, `fedawa`, `fedmvp`, `fedmpt` |
+| `--model_name` | One of: `dualcoop`, `poscoop`, `scpnet`, `maple`, `tcp`, `fedtpg`, `fedpgp`, `fedram`, `fedawa`, `fedmvp`, `fedmpt` |
 | `--num_clusters` | Number of client clusters |
 | `--num_cls_per_client` | Classes per client |
 | `--avail_percent` | Fraction of clients sampled per round |
