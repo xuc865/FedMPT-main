@@ -128,12 +128,12 @@ If any dataset link is unavailable, you can also obtain mirrors from [OpenDataLa
 export DATA_ROOT=./data
 export OUTPUT_DIR=./outputs
 
-# bash run.sh <dataset> <lr> <model> <epochs> <gpu> <num_clusters>
-bash run.sh voc         0.001 fedmpt   50 0 2
-bash run.sh coco        0.001 fedmpt  100 0 8
-bash run.sh nus         0.001 dualcoop 50 0 4
-bash run.sh multiscene  0.001 fedmpt   50 0 2
-bash run.sh mlrsnet     0.001 fedmpt   50 0 4
+# bash run.sh <dataset>    <lr>     <model>    <epochs> <gpu> <num_clusters>
+bash run.sh voc            0.001    fedmpt     50       0     2
+bash run.sh coco           0.001    fedmpt     100      0     8
+bash run.sh nus            0.001    dualcoop   50       0     4
+bash run.sh multiscene     0.001    fedmpt     50       0     2
+bash run.sh mlrsnet        0.001    fedmpt     50       0     4
 ```
 
 | # | Argument | Description |
