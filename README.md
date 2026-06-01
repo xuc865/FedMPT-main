@@ -286,4 +286,14 @@ Launch_FL.py  →  Server(cfg).train()
 
 ## 📄 Citation
 
-If you use OpenFedML or FedMPT, please cite our paper (bibtex to be added).
+If you use OpenFedML or FedMPT, please cite our paper:
+
+```
+@inproceedings{wang2026fedmpt,
+  title={FedMPT: Federated Multi-Label Prompt Tuning of Vision-Language Models},
+  author={Wang, Xucong and Wang, Pengkun and Zhao, Zhe and Yu, Liheng and Wang, Shuang and Wang, Yang},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={17226--17236},
+  year={2026}
+}
+```
