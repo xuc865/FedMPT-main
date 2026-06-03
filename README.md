@@ -288,7 +288,7 @@ Launch_FL.py  →  Server(cfg).train()
 
 If you use OpenFedML or FedMPT, please cite our paper:
 
-```
+```bibtex
 @inproceedings{wang2026fedmpt,
   title={FedMPT: Federated Multi-Label Prompt Tuning of Vision-Language Models},
   author={Wang, Xucong and Wang, Pengkun and Zhao, Zhe and Yu, Liheng and Wang, Shuang and Wang, Yang},
